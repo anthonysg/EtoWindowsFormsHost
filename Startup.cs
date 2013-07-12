@@ -15,6 +15,7 @@ namespace TestApplicationforWinformCalEto.cs
             {
                 var generator = new Eto.Platform.Wpf.Generator();
                 generator.Add<IDateTimePicker>(() => new MyDateTimePickerHandler());
+                generator.Add<ITextBox>(() => new MyTextBoxHandler());
 
                 var app = new Application(generator);
 

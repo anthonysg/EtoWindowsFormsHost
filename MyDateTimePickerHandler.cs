@@ -17,7 +17,7 @@ namespace TestApplicationforWinformCalEto.cs
         where W : Control
     {
         protected C swfControl;
-
+        
         public WindowsFormHostHandler(C swfControl)
         {
             this.swfControl = swfControl;
@@ -160,7 +160,5 @@ namespace TestApplicationforWinformCalEto.cs
                     picker.Checked = false;
             }
         }
-
-        
     }
 }
