@@ -19,26 +19,24 @@ namespace TestApplicationforWinformCalEto.cs
 
         public MyTextBoxHandler() : base(new swf.TextBox())
         {
+            
             textBox = swfControl;
             PlaceholderText = null;
             textBox.Text = null;
-            textBox.TextChanged += delegate
+            textBox.TextChanged += delegate //fix placeholder text.
             {
                 Widget.OnTextChanged(EventArgs.Empty);
             };
         }
-
+        
         public int MaxLength
         {
             get { return textBox.MaxLength; }
             set { textBox.MaxLength = value; }
         }
 
-        public string PlaceholderText
-        {
-            get { return textBox.PlaceholderText; }
-            set { textBox.PlaceHolderText = value; }
-        }
+        [Obsolete("This Feature is not supported in System.Windows.Forms.")]
+        public string PlaceholderText { get; set; }
 
         public bool ReadOnly
         {
@@ -64,8 +62,5 @@ namespace TestApplicationforWinformCalEto.cs
                 textChanging = false;
             }
         }
-
-            
-        
     }
 }

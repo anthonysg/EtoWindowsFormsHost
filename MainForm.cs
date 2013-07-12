@@ -29,8 +29,10 @@ namespace TestApplicationforWinformCalEto.cs
             {
                 Font = new Font(FontFamilies.SansFamilyName, 12, FontStyle.Italic)
             };
-            //textBox.PlaceholderText = "This is Placeholder Text.";
-            textBox.MaxLength = 5;
+            textBox.PlaceholderText = "This is Placeholder Text.";
+            //textBox.MaxLength = 5;
+            textBox.Text = "test";
+            textBox.ReadOnly = false;
 
             rootLayout.Add(dateTimePicker);
             rootLayout.Add(textBox);
